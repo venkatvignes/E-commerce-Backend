@@ -20,7 +20,7 @@ const userSchema = new mongoose.Schema(
     password: {
       type: String,
       required: true, // Password is mandatory
-      minlength: 6, // Minimum password length
+      minlength: 10,
     },
     role: {
       type: String,

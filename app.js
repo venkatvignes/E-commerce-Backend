@@ -39,5 +39,7 @@ mongoose
 // }
 
 // addMovie();
-
+app.get("/", (req, res) => {
+  res.send("Server running");
+});
 app.listen("4000");

@@ -4,11 +4,17 @@ require("dotenv").config();
 const cors = require("cors");
 // const Movie = require("./Models/userSchema");
 const apiRoutes = require("./Api/userRoutes");
+const categoryRoutes = require("./Api/categoryRoutes");
 const app = express();
+
 // Middleware
 app.use(express.json());
 app.use(cors());
+
+//routes
 app.use("/app", apiRoutes);
+app.use("/app", categoryRoutes);
+
 //monogConnection
 const MongoUrI = process.env.MONGO_URI;
 
